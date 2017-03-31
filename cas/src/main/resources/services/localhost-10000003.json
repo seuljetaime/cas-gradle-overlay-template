@@ -5,6 +5,15 @@
   "id": 10000003,
   "evaluationOrder": 10003,
   "attributeReleasePolicy": {
-    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy",
+    "principalAttributesRepository" : {
+      "@class" : "org.apereo.cas.authentication.principal.DefaultPrincipalAttributesRepository"
+    }
+  },
+  "accessStrategy": {
+    "@class": "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled": true,
+    "ssoEnabled": true,
+    "caseInsensitive": true
   }
 }
